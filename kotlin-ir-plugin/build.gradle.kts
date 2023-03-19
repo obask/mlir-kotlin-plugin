@@ -2,6 +2,7 @@ plugins {
   kotlin("jvm")
   kotlin("kapt")
   id("com.github.gmazzo.buildconfig")
+  `maven-publish`
 }
 
 dependencies {
@@ -18,4 +19,13 @@ dependencies {
 buildConfig {
   packageName(group.toString())
   buildConfigField("String", "KOTLIN_PLUGIN_ID", "\"${rootProject.extra["kotlin_plugin_id"]}\"")
+}
+
+publishing {
+  publications {
+    create<MavenPublication>("maven") {
+      artifactId = "kotlin-ir-plugin"
+      from(components["java"])
+    }
+  }
 }

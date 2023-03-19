@@ -25,7 +25,7 @@ import org.jetbrains.kotlin.compiler.plugin.ExperimentalCompilerApi
 import org.jetbrains.kotlin.config.CompilerConfiguration
 
 @OptIn(ExperimentalCompilerApi::class)
-//@AutoService(CompilerPluginRegistrar::class)
+@AutoService(CompilerPluginRegistrar::class)
 class TemplateComponentRegistrar(
   private val defaultString: String,
   private val defaultFile: String,

@@ -3,8 +3,7 @@ buildscript {
 }
 
 plugins {
-  kotlin("jvm") version "1.7.10" apply false
-  id("org.jetbrains.dokka") version "1.7.10" apply false
+  kotlin("jvm") version "1.8.10" apply false
   id("com.gradle.plugin-publish") version "1.0.0" apply false
   id("com.github.gmazzo.buildconfig") version "3.1.0" apply false
 }
