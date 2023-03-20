@@ -1,0 +1,38 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.20-RC'
+    id 'application'
+    id 'my.kotlin.fir2mlir.fir-plugin' version '0.1.0-SNAPSHOT'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+}
+
+kotlin {
+    jvmToolchain(11)
+    sourceSets.configureEach {
+        languageSettings {
+            languageVersion = "2.0"
+        }
+    }
+}
+
+fir2mlir {
+    fileProperty.set(file "Readme.md")
+    stringProperty = "fdas"
+}
+
+compileKotlin {
+    outputs.upToDateWhen { false }
+}
+
+application {
+    mainClassName = 'MainKt'
+}

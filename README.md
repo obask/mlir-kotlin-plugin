@@ -1,24 +1,12 @@
-# kotlin-ir-plugin-template
+# kotlin-ir-plugin-fir2mlir
 
-Template project for building Kotlin compiler plugins using IR.
+Fir2Mlir project for building Kotlin compiler plugins using IR.
 
 ### Usage:
 
-Run `./gradlew :publishToMavenLocal` 
-
-And add these lines to any kotlin project:
-```gradle
-
-template {
-    fileProperty.set(file "Readme.md")
-    stringProperty = "fdas"
-}
-
-compileKotlin {
-    outputs.upToDateWhen { false }
-}
-
-
+Run 
+```
+./gradlew publishToMavenLocal
+./gradlew -p sample :compileKotlin
 ```
 
-TODO: change `template` to something meaningful

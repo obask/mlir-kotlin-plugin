@@ -1,4 +1,4 @@
-rootProject.name = "kotlin-ir-plugin-template"
+rootProject.name = "kotlin-ir-plugin-fir2mlir"
 
-include(":kotlin-ir-plugin-gradle")
-include(":kotlin-ir-plugin")
+include(":compiler-gradle-plugin")
+include(":fir-plugin")
